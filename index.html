@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Создать аккаунт</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="desktop" aria-hidden="true">
+      <div class="menubar">
+        <b>Finder</b><span>Файл</span><span>Правка</span><span>Вид</span>
+      </div>
+      <div class="background-window">
+        <div class="background-sidebar"></div>
+        <div class="background-content">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="dock"><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+    <main class="overlay">
+      <section
+        class="window"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="title"
+      >
+        <header class="titlebar">
+          <div class="traffic-lights" aria-hidden="true">
+            <i></i><i></i><i></i>
+          </div>
+          <span>Аккаунт</span>
+        </header>
+        <div class="content">
+          <div class="eyebrow">ЛИЧНЫЙ КАБИНЕТ</div>
+          <h1 id="title">Добро пожаловать</h1>
+          <p class="subtitle">Создайте аккаунт, чтобы продолжить.</p>
+          <form id="registration">
+            <label for="email">Почта</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="you@example.com"
+              required
+            />
+            <label for="password">Пароль</label>
+            <div class="password-field">
+              <input
+                id="password"
+                name="password"
+                type="password"
+                autocomplete="new-password"
+                placeholder="Не менее 8 символов"
+                minlength="8"
+                required
+              />
+              <!-- Deliberately no type: this button submits the form in bug mode. -->
+              <button
+                id="visibility"
+                class="visibility"
+                aria-label="Показать пароль"
+                aria-pressed="false"
+                title="Показать пароль"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  aria-hidden="true"
+                >
+                  <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z" />
+                  <circle cx="12" cy="12" r="3" />
+                  <path class="eye-slash" d="m4 4 16 16" />
+                </svg>
+              </button>
+            </div>
+            <button class="primary" type="submit">
+              Создать аккаунт <span aria-hidden="true">↗</span>
+            </button>
+          </form>
+          <div class="result" id="result" role="status" aria-live="polite">
+            Ожидание отправки
+          </div>
+          <footer class="demo-controls">
+            <div
+              class="segmented"
+              role="group"
+              aria-label="Режим кнопки показа пароля"
+            >
+              <button type="button" id="bug" aria-pressed="true">
+                Без type</button
+              ><button type="button" id="fix" aria-pressed="false">
+                type="button"
+              </button>
+            </div>
+            <button
+              type="button"
+              class="reset"
+              id="reset"
+              title="Сбросить форму"
+              aria-label="Сбросить форму"
+            >
+              ↺
+            </button>
+          </footer>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
