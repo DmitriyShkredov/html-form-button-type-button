@@ -1,4 +1,4 @@
-## html-form-button-type-button
+## Html form button type
 
 #### `Demo:` https://dmitriyshkredov.github.io/html-form-button-type-button/
 
